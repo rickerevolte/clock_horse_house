@@ -15,6 +15,13 @@ const Sound = () => {
             >
                 start horse
             </button>
+            <button
+                onClick={() => {
+                    audio.pause();
+                }}
+            >
+                stop horse
+            </button>
         </div>
     );
 };

@@ -32,7 +32,7 @@ class Music extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={this.togglePlay}>{this.state.play ? 'Pause' : 'Play House'}</button>
+                <button onClick={this.togglePlay}>{this.state.play ? 'Pause House' : 'Play House'}</button>
             </div>
         );
     }

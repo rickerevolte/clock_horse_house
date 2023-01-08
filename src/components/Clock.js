@@ -5,7 +5,7 @@ import '../../src/index.css';
 
 let startSeconds = 0;
 
-const audio = new Audio(horse);
+let audio = new Audio();
 
 class Clock extends React.Component {
     constructor(props) {
@@ -51,6 +51,15 @@ class Clock extends React.Component {
         startSeconds = this.state.date.getTime();
     };
 
+    killlHorse() {
+        console.log("horse off");
+        audio = new Audio();
+    }
+    startHorse() {
+        console.log("horse on");
+        audio = new Audio(horse);
+    }
+
     checkDecenials() {
         if ((this.state.seconds + 1) % 10 === 0) {
             // console.log(`it is a decenial: ${this.state.seconds+1}`);
@@ -70,7 +79,7 @@ class Clock extends React.Component {
     render() {
         return (
             <div>
-                <Sound></Sound>
+                {/* <Sound></Sound> */}
                 <h1>{this.state.date.toLocaleDateString()}</h1>
                 <h2>{this.state.date.toLocaleTimeString()}</h2>
                 <div className='container' style={{ display: 'flex', flexdirection: 'row', gap: '1ch' }}>
@@ -85,6 +94,8 @@ class Clock extends React.Component {
                         <h3> {this.state.seconds}</h3></div>
                 </div>
                 <button onClick={() => this.reset()}>reset Timer</button>
+                <button on onClick={() => this.killlHorse()}>kill Horse</button>
+                <button on onClick={() => this.startHorse()}>start Horse</button>
             </div>
 
         );
