@@ -1,11 +1,4 @@
 import React from 'react'
-// import { Button, Input, Icon, Dropdown, Card } from 'semantic-ui-react'
-// import { Link } from 'react-router-dom'
-// import $ from 'jquery'
-// import styles from './Home.scss'
-// import Modal from './Modal.jsx'
-// import MakeChannelModal from './MakeChannelModal.jsx'
-
 
 class Music extends React.Component {
     state = {

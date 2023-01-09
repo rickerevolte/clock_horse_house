@@ -1,6 +1,5 @@
 import React from 'react';
 import Clock from './components/Clock';
-// import Clock2 from './components/Clock2';
 import Music from './components/Music';
 
 const App = () => {
@@ -8,11 +7,9 @@ const App = () => {
     <div className="App">
       <Clock />
       <br></br>
-      <Music></Music>
+      <h4>add some fancy music</h4>
+      <Music />
     </div>
   )
-
-
 }
-
 export default App;
